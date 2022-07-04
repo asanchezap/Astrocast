@@ -180,15 +180,15 @@ GPIO.setup(3, GPIO.IN)
 
 while True:
 	send(RTC_RR, "")
-	send(SAK_RR, "")
-	send(SAK_CR, "")
+	#send(SAK_RR, "")
+	#send(SAK_CR, "")
 
 	if GPIO.input(3):
 		payload = b"Msg auto cada 1h, Raspberry inicia auto, SensorLuz: 1 Noche"
 	else:
 		payload = b"Msg auto cada 1h, Raspberry inicia auto, SensorLuz: 0 Dia"
 
-	send(WIF_WR, configuration_wifi)
+#	send(WIF_WR, configuration_wifi)
 	send(PLD_ER, generate_message(payload))
 	time.sleep(1*60*60)
 

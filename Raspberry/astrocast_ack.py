@@ -1,3 +1,5 @@
+
+
 """
 
 File:               main.py
@@ -57,7 +59,8 @@ WIF_WR = "06"     # WiFi configuration write (in RAM9
 CFG_RR = "15"     # Configuration read
 EVT_RR = "65"     # Read the event register
 SAK_RR = "45"     # Read satellite ACK
-SAK_CR = "46"     # Clear satellite aCK
+SAK_CR = "46"     # Clear satellite ACK
+RTC_RR = "17"	  # Real time clock read
 
 
 # --------------------------------------------------------------------------------
@@ -70,8 +73,10 @@ payload = b"Msg automatico cada 2 min, Rasp inicia automaticamente, modulo WiFi"
 latitude = 46.534363896181624
 longitude = 6.578710272772917
 
-ssid = b"MiFibra-DA72"
-password = b"a3rSfZJQ"
+#ssid = b"MiFibra-DA72"
+#password = b"a3rSfZJQ"
+ssid = b"DIGIFIBRA-AS3x"
+password = b"95uUaTGsDX"
 token = b"Zxi2MlfeW0TWHvVMBHaREFL3SV3wMI4OVNG0D35alT7qcDR6NJzwL1UtUok0qSAo4fb2X3iGL8FUHu1od6RciIc22ngpTfTC"
 
 configuration_wifi = binascii.hexlify(ssid).ljust(66, b'0') + \
@@ -126,9 +131,11 @@ def send(opcode, data):
     ser.write(msg)
     print("")
     print("[sent]      -->  " + " ".join(["{:02x}".format(x) for x in msg]))
-	f = open('/home/muny/Desktop/Astrocast/Raspberry/log.txt', 'w')
-	try:
-	f.write(
+
+    f = open('/home/muny/Desktop/Astrocast/Raspberry/log_ack.txt', 'a')
+    f.write("[sent]      -->  " + " ".join(["{:02x}".format(x) for x in msg]) + "\n")
+    f.close()
+
     receive()
 
 
@@ -136,6 +143,9 @@ def receive():
     output = ser.read(160)
     print("[received]  <--  " + " ".join(["{:02x}".format(x) for x in output]))
 
+    f = open('/home/muny/Desktop/Astrocast/Raspberry/log_ack.txt', 'a')
+    f.write("[received]  <--  " + " ".join(["{:02x}".format(x) for x in output]) + "\n")
+    f.close()
 
 def text_to_hex(text):
     return binascii.hexlify(text).decode('ascii')
@@ -169,14 +179,17 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(3, GPIO.IN)
 
 while True:
-		
-	if GPIO.input(3):
-		payload = b"Msg auto cada 1h, Raspberry inicia auto, SensorLuz: 1 Noche"
-	else:
-		payload = b"Msg auto cada 1h, Raspberry inicia auto, SensorLuz: 0 Dia"
+	send(RTC_RR, "")
+	send(SAK_RR, "")
+	send(SAK_CR, "")
 
+#	if GPIO.input(3):
+#		payload = b"Msg auto cada 1h, Raspberry inicia auto, SensorLuz: 1 Noche"
+#	else:
+#		payload = b"Msg auto cada 1h, Raspberry inicia auto, SensorLuz: 0 Dia"
+#
 #	send(WIF_WR, configuration_wifi)
-	send(PLD_ER, generate_message(payload))
-	time.sleep(1*60*60)
+#	send(PLD_ER, generate_message(payload))
+	time.sleep(5*60)
 
     
