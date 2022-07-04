@@ -59,7 +59,8 @@ WIF_WR = "06"     # WiFi configuration write (in RAM9
 CFG_RR = "15"     # Configuration read
 EVT_RR = "65"     # Read the event register
 SAK_RR = "45"     # Read satellite ACK
-SAK_CR = "46"     # Clear satellite aCK
+SAK_CR = "46"     # Clear satellite ACK
+RTC_RR = "17"	  # Real time clock read
 
 
 # --------------------------------------------------------------------------------
@@ -72,8 +73,10 @@ payload = b"Msg automatico cada 2 min, Rasp inicia automaticamente, modulo WiFi"
 latitude = 46.534363896181624
 longitude = 6.578710272772917
 
-ssid = b"MiFibra-DA72"
-password = b"a3rSfZJQ"
+#ssid = b"MiFibra-DA72"
+#password = b"a3rSfZJQ"
+ssid = b"DIGIFIBRA-AS3x"
+password = b"95uUaTGsDX"
 token = b"Zxi2MlfeW0TWHvVMBHaREFL3SV3wMI4OVNG0D35alT7qcDR6NJzwL1UtUok0qSAo4fb2X3iGL8FUHu1od6RciIc22ngpTfTC"
 
 configuration_wifi = binascii.hexlify(ssid).ljust(66, b'0') + \
@@ -176,12 +179,16 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(3, GPIO.IN)
 
 while True:
+	send(RTC_RR, "")
+	send(SAK_RR, "")
+	send(SAK_CR, "")
+
 	if GPIO.input(3):
 		payload = b"Msg auto cada 1h, Raspberry inicia auto, SensorLuz: 1 Noche"
 	else:
 		payload = b"Msg auto cada 1h, Raspberry inicia auto, SensorLuz: 0 Dia"
 
-#	send(WIF_WR, configuration_wifi)
+	send(WIF_WR, configuration_wifi)
 	send(PLD_ER, generate_message(payload))
 	time.sleep(1*60*60)
 
