@@ -138,6 +138,28 @@ def send(opcode, data):
 
     receive()
 
+def check_ACK():
+    msg = EVT_RR
+    crc = generate_crc(msg)
+    msg += crc
+    msg = hexlify(msg.encode())
+    msg = "02" + msg.decode()
+    msg += "03"
+    msg = bytearray.fromhex(msg)
+    ser.write(msg)
+    print("")
+    print("[sent]      -->  " + " ".join(["{:02x}".format(x) for x in msg]))
+
+    output = ser.read(160)
+    print(text_to_hex(output))
+
+#    if (text_to_hex(output)[9]=="1"):
+    send(EVT_RR, "")
+    send(RTC_RR, "")
+    send(SAK_RR, "")
+    send(SAK_CR, "")
+
+
 
 def receive():
     output = ser.read(160)
@@ -179,9 +201,7 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(3, GPIO.IN)
 
 while True:
-	send(RTC_RR, "")
-	send(SAK_RR, "")
-	send(SAK_CR, "")
+	check_ACK()
 
 #	if GPIO.input(3):
 #		payload = b"Msg auto cada 1h, Raspberry inicia auto, SensorLuz: 1 Noche"
