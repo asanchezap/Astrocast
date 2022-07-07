@@ -133,7 +133,8 @@ def send(opcode, data):
     print("[sent]      -->  " + " ".join(["{:02x}".format(x) for x in msg]))
 
     f = open('/home/muny/Desktop/Astrocast/Raspberry/log.txt', 'a')
-    f.write("[sent]      -->  " + " ".join(["{:02x}".format(x) for x in msg]) + "\n")
+    f.write("".join(["{:02x}".format(x) for x in msg]) + "\n")
+    # f.write("[sent]      -->  " + " ".join(["{:02x}".format(x) for x in msg]) + "\n")
     f.close()
 
     receive()
@@ -144,7 +145,8 @@ def receive():
     print("[received]  <--  " + " ".join(["{:02x}".format(x) for x in output]))
 
     f = open('/home/muny/Desktop/Astrocast/Raspberry/log.txt', 'a')
-    f.write("[received]  <--  " + " ".join(["{:02x}".format(x) for x in output]) + "\n")
+    f.write("".join(["{:02x}".format(x) for x in output]) + "\n")
+    #f.write("[received]  <--  " + " ".join(["{:02x}".format(x) for x in output]) + "\n")
     f.close()
 
 def text_to_hex(text):
@@ -191,5 +193,3 @@ while True:
 #	send(WIF_WR, configuration_wifi)
 	send(PLD_ER, generate_message(payload))
 	time.sleep(1*60*60)
-
-    

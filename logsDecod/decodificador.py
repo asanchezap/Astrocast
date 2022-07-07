@@ -127,9 +127,9 @@ def dec_to_bin(decimal):
 def getInfo(m, op):
     mm = ""
     if op==RTC_RA:
-        mm += "RTC Time: " + str(TimeReference + timedelta(seconds=int(m)))
+        mm += "RTC Time: " + str(TimeReference + timedelta(seconds=int(hex_to_decimal(m))))
     elif op==EVT_RA:
-        bin = str(dec_to_bin(int(m)))
+        bin = str(dec_to_bin(int(hex_to_decimal(m))))
         mm += "EVENT: " + bin + " --> "
         if len(bin)>0 and bin[-1]=='1':      mm += "satellite payload acknowledgement + "
         if len(bin)>1 and bin[-2]=='1':      mm += "module has reset + "
@@ -137,7 +137,11 @@ def getInfo(m, op):
         if len(bin)>3 and bin[-4]=='1':      mm += "uplink message is present in the message queue + "
         mm += ")"
     elif op==SAK_RA:
-        mm += "ACK FROM PAYLOAD ID: " + m
+        mm += "ACK FROM PAYLOAD ID: " + hex_to_decimal(m)
+    elif op==PLD_ER:
+        mm += "ID: 0x" + m[-4:-1] + "_"
+    elif op==PLD_EA:
+        mm += "PAYLOAD ID: 0x" + m
     return mm
 
 
@@ -159,9 +163,9 @@ try:
 
         output.write(linea)
         output.write(op + " > " + decode(op) + " > " + opCode(decode(op)) + "\n")
-        output.write(msg + " > " + decode(msg) + " > 0x" + msg_hex + " or dec" + hex_to_decimal(msg_hex) + " > " + getInfo(hex_to_decimal(msg_hex), decode(op)) + "\n\n")
+        output.write(msg + " > " + decode(msg) + " > 0x" + msg_hex + " or dec" + hex_to_decimal(msg_hex) + " > " + getInfo(msg_hex, decode(op)) + "\n\n")
 
-        output2.write(opCode(decode(op)) + getInfo(hex_to_decimal(msg_hex), decode(op)) + "\n")
+        output2.write(opCode(decode(op)) + "            " + getInfo(msg_hex, decode(op)) + "\n")
 finally:
     input.close()
     output.close()
