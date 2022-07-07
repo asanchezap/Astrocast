@@ -1,0 +1,148 @@
+02 31 37 32 36 38 33 03
+31 37 > 17 > RTC_RR: Real time clock read
+ >  > 0x or dec > 
+
+02 39 37 30 30 30 30 30 30 30 30 35 32 35 30 03
+39 37 > 97 > RTC_RA: Real time clock read [ANSWER]
+30 30 30 30 30 30 30 30 > 00000000 > 0x00000000 or dec0 > RTC Time: 2018-01-01 00:00:00
+
+02 46 46 30 31 34 35 41 46 32 38 03
+46 46 > FF > ERROR
+30 31 34 35 > 0145 > 0x4501 or dec17665 > 
+
+02 34 36 66 32 63 39 03
+34 36 > 46 > SAK_CR: Clear satellite ACK
+ >  > 0x or dec > 
+
+02 46 46 30 31 34 36 43 43 31 38 03
+46 46 > FF > ERROR
+30 31 34 36 > 0146 > 0x4601 or dec17921 > 
+
+02 36 35 66 33 64 64 03
+36 35 > 65 > EVT_RR: Read the event register
+ >  > 0x or dec > 
+
+02 45 35 30 33 32 42 43 32 03
+45 35 > E5 > EVT_RA: Read the event register [ANSWER]
+30 33 > 03 > 0x03 or dec3 > EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+
+02 31 37 32 36 38 33 03
+31 37 > 17 > RTC_RR: Real time clock read
+ >  > 0x or dec > 
+
+02 39 37 30 44 33 32 37 41 30 38 38 42 41 34 03
+39 37 > 97 > RTC_RA: Real time clock read [ANSWER]
+30 44 33 32 37 41 30 38 > 0D327A08 > 0x087A320D or dec142225933 > RTC Time: 2022-07-05 03:12:13
+
+02 34 35 39 31 66 39 03
+34 35 > 45 > SAK_RR: Read satellite ACK
+ >  > 0x or dec > 
+
+02 43 35 32 39 39 30 35 43 33 45 03
+43 35 > C5 > SAK_RA: Read satellite ACK [ANSWER]
+32 39 39 30 > 2990 > 0x9029 or dec36905 > ACK FROM PAYLOAD ID: 36905
+
+02 34 36 66 32 63 39 03
+34 36 > 46 > SAK_CR: Clear satellite ACK
+ >  > 0x or dec > 
+
+02 43 36 37 41 35 38 03
+43 36 > C6 > SAK_CA: Clear satellite ACK  [ANSWER]
+ >  > 0x or dec > 
+
+02 36 35 66 33 64 64 03
+36 35 > 65 > EVT_RR: Read the event register
+ >  > 0x or dec > 
+
+02 45 35 30 33 32 42 43 32 03
+45 35 > E5 > EVT_RA: Read the event register [ANSWER]
+30 33 > 03 > 0x03 or dec3 > EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+
+02 31 37 32 36 38 33 03
+31 37 > 17 > RTC_RR: Real time clock read
+ >  > 0x or dec > 
+
+02 39 37 34 38 33 33 37 41 30 38 36 32 34 31 03
+39 37 > 97 > RTC_RA: Real time clock read [ANSWER]
+34 38 33 33 37 41 30 38 > 48337A08 > 0x087A3348 or dec142226248 > RTC Time: 2022-07-05 03:17:28
+
+02 34 35 39 31 66 39 03
+34 35 > 45 > SAK_RR: Read satellite ACK
+ >  > 0x or dec > 
+
+02 43 35 38 33 33 31 32 32 36 39 03
+43 35 > C5 > SAK_RA: Read satellite ACK [ANSWER]
+38 33 33 31 > 8331 > 0x3183 or dec12675 > ACK FROM PAYLOAD ID: 12675
+
+02 34 36 66 32 63 39 03
+34 36 > 46 > SAK_CR: Clear satellite ACK
+ >  > 0x or dec > 
+
+02 43 36 37 41 35 38 03
+43 36 > C6 > SAK_CA: Clear satellite ACK  [ANSWER]
+ >  > 0x or dec > 
+
+02 36 35 66 33 64 64 03
+36 35 > 65 > EVT_RR: Read the event register
+ >  > 0x or dec > 
+
+02 45 35 30 33 32 42 43 32 03
+45 35 > E5 > EVT_RA: Read the event register [ANSWER]
+30 33 > 03 > 0x03 or dec3 > EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+
+02 31 37 32 36 38 33 03
+31 37 > 17 > RTC_RR: Real time clock read
+ >  > 0x or dec > 
+
+02 39 37 38 33 33 34 37 41 30 38 34 39 36 39 03
+39 37 > 97 > RTC_RA: Real time clock read [ANSWER]
+38 33 33 34 37 41 30 38 > 83347A08 > 0x087A3483 or dec142226563 > RTC Time: 2022-07-05 03:22:43
+
+02 34 35 39 31 66 39 03
+34 35 > 45 > SAK_RR: Read satellite ACK
+ >  > 0x or dec > 
+
+02 43 35 37 34 35 34 37 37 44 46 03
+43 35 > C5 > SAK_RA: Read satellite ACK [ANSWER]
+37 34 35 34 > 7454 > 0x5474 or dec21620 > ACK FROM PAYLOAD ID: 21620
+
+02 34 36 66 32 63 39 03
+34 36 > 46 > SAK_CR: Clear satellite ACK
+ >  > 0x or dec > 
+
+02 43 36 37 41 35 38 03
+43 36 > C6 > SAK_CA: Clear satellite ACK  [ANSWER]
+ >  > 0x or dec > 
+
+02 36 35 66 33 64 64 03
+36 35 > 65 > EVT_RR: Read the event register
+ >  > 0x or dec > 
+
+02 45 35 30 33 32 42 43 32 03
+45 35 > E5 > EVT_RA: Read the event register [ANSWER]
+30 33 > 03 > 0x03 or dec3 > EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+
+02 31 37 32 36 38 33 03
+31 37 > 17 > RTC_RR: Real time clock read
+ >  > 0x or dec > 
+
+02 39 37 42 45 33 35 37 41 30 38 31 36 34 42 03
+39 37 > 97 > RTC_RA: Real time clock read [ANSWER]
+42 45 33 35 37 41 30 38 > BE357A08 > 0x087A35BE or dec142226878 > RTC Time: 2022-07-05 03:27:58
+
+02 34 35 39 31 66 39 03
+34 35 > 45 > SAK_RR: Read satellite ACK
+ >  > 0x or dec > 
+
+02 43 35 37 32 33 37 31 34 32 39 03
+43 35 > C5 > SAK_RA: Read satellite ACK [ANSWER]
+37 32 33 37 > 7237 > 0x3772 or dec14194 > ACK FROM PAYLOAD ID: 14194
+
+02 34 36 66 32 63 39 03
+34 36 > 46 > SAK_CR: Clear satellite ACK
+ >  > 0x or dec > 
+
+02 43 36 37 41 35 38 03
+43 36 > C6 > SAK_CA: Clear satellite ACK  [ANSWER]
+ >  > 0x or dec > 
+

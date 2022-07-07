@@ -7,3 +7,7 @@
 ## Arduino
 * Librerías de acceso
 * Código de ejemplo proporcionado por astrocast para utilizar su módulo
+
+##logsDecod
+* Programa para decodificar los mensajes entre módulo Astrocast y Raspberry o log_WiFi_GUI
+* Logs del GUI

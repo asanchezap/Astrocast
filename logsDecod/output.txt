@@ -1,0 +1,37 @@
+RTC_RR: Real time clock read
+RTC_RA: Real time clock read [ANSWER]RTC Time: 2018-01-01 00:00:00
+ERROR
+SAK_CR: Clear satellite ACK
+ERROR
+EVT_RR: Read the event register
+EVT_RA: Read the event register [ANSWER]EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+RTC_RR: Real time clock read
+RTC_RA: Real time clock read [ANSWER]RTC Time: 2022-07-05 03:12:13
+SAK_RR: Read satellite ACK
+SAK_RA: Read satellite ACK [ANSWER]ACK FROM PAYLOAD ID: 36905
+SAK_CR: Clear satellite ACK
+SAK_CA: Clear satellite ACK  [ANSWER]
+EVT_RR: Read the event register
+EVT_RA: Read the event register [ANSWER]EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+RTC_RR: Real time clock read
+RTC_RA: Real time clock read [ANSWER]RTC Time: 2022-07-05 03:17:28
+SAK_RR: Read satellite ACK
+SAK_RA: Read satellite ACK [ANSWER]ACK FROM PAYLOAD ID: 12675
+SAK_CR: Clear satellite ACK
+SAK_CA: Clear satellite ACK  [ANSWER]
+EVT_RR: Read the event register
+EVT_RA: Read the event register [ANSWER]EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+RTC_RR: Real time clock read
+RTC_RA: Real time clock read [ANSWER]RTC Time: 2022-07-05 03:22:43
+SAK_RR: Read satellite ACK
+SAK_RA: Read satellite ACK [ANSWER]ACK FROM PAYLOAD ID: 21620
+SAK_CR: Clear satellite ACK
+SAK_CA: Clear satellite ACK  [ANSWER]
+EVT_RR: Read the event register
+EVT_RA: Read the event register [ANSWER]EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+RTC_RR: Real time clock read
+RTC_RA: Real time clock read [ANSWER]RTC Time: 2022-07-05 03:27:58
+SAK_RR: Read satellite ACK
+SAK_RA: Read satellite ACK [ANSWER]ACK FROM PAYLOAD ID: 14194
+SAK_CR: Clear satellite ACK
+SAK_CA: Clear satellite ACK  [ANSWER]
