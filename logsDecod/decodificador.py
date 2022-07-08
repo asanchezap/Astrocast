@@ -139,7 +139,7 @@ def getInfo(m, op):
     elif op==SAK_RA:
         mm += "ACK FROM PAYLOAD ID: " + hex_to_decimal(m)
     elif op==PLD_ER:
-        mm += "ID: 0x" + m[-4:-1] + "_"
+        mm += "ID: 0x" + m[-4] + m[-3] + m[-2] + m[-1]
     elif op==PLD_EA:
         mm += "PAYLOAD ID: 0x" + m
     return mm
@@ -151,7 +151,7 @@ def getInfo(m, op):
 # Programa principal
 # --------------------------------------------------------------------------------
 
-input = open('log_ack.txt', 'r')
+input = open('log.txt', 'r')
 output = open('output_extended.txt', 'w')
 output2 = open('output.txt', 'w')
 
