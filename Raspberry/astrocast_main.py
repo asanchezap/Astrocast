@@ -73,10 +73,10 @@ payload = b"Msg automatico cada 2 min, Rasp inicia automaticamente, modulo WiFi"
 latitude = 46.534363896181624
 longitude = 6.578710272772917
 
-#ssid = b"MiFibra-DA72"
-#password = b"a3rSfZJQ"
-ssid = b"DIGIFIBRA-AS3x"
-password = b"95uUaTGsDX"
+ssid = b"MiFibra-DA72"
+password = b"a3rSfZJQ"
+#ssid = b"DIGIFIBRA-AS3x"
+#password = b"95uUaTGsDX"
 token = b"Zxi2MlfeW0TWHvVMBHaREFL3SV3wMI4OVNG0D35alT7qcDR6NJzwL1UtUok0qSAo4fb2X3iGL8FUHu1od6RciIc22ngpTfTC"
 
 configuration_wifi = binascii.hexlify(ssid).ljust(66, b'0') + \
@@ -133,8 +133,8 @@ def send(opcode, data):
     print("[sent]      -->  " + " ".join(["{:02x}".format(x) for x in msg]))
 
     f = open('/home/muny/Desktop/Astrocast/Raspberry/log.txt', 'a')
-    f.write("".join(["{:02x}".format(x) for x in msg]) + "\n")
-    # f.write("[sent]      -->  " + " ".join(["{:02x}".format(x) for x in msg]) + "\n")
+    f.write(" ".join(["{:02x}".format(x) for x in msg]) + "\n")
+    #f.write("[sent]      -->  " + " ".join(["{:02x}".format(x) for x in msg]) + "\n")
     f.close()
 
     receive()
@@ -145,7 +145,7 @@ def receive():
     print("[received]  <--  " + " ".join(["{:02x}".format(x) for x in output]))
 
     f = open('/home/muny/Desktop/Astrocast/Raspberry/log.txt', 'a')
-    f.write("".join(["{:02x}".format(x) for x in output]) + "\n")
+    f.write(" ".join(["{:02x}".format(x) for x in output]) + "\n")
     #f.write("[received]  <--  " + " ".join(["{:02x}".format(x) for x in output]) + "\n")
     f.close()
 
@@ -170,12 +170,12 @@ def generate_message(payload):
 
 
 # If using the Astronode S DevKit Wi-Fi (comment if using Satellite board)
-#send(WIF_WR, configuration_wifi)
+send(WIF_WR, configuration_wifi)
 
 # If you want to specify geolocation (comment if not)
-#send(GEO_WR, generate_geolocation(latitude, longitude))
+send(GEO_WR, generate_geolocation(latitude, longitude))
 
-#send(PLD_ER, generate_message(payload))
+send(PLD_ER, generate_message(payload))
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(3, GPIO.IN)
