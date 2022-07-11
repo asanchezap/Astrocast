@@ -1,33 +1,32 @@
 /*
-  This example enqueue a single message in the queue of the Astronode S.
-  It checks periodically if a new event is available.
-  If a "satellite acknowledge" event is receieved, a new message is enqueued in the module.
+  IOT PROYECT WITH ARDUINO AND ASTROCAST MODULE
+  
+  Description:  
+    - Reads temperature sensor (LM35) and sends the data via the Astrocast module to the satellite each hour
+    - Checks ACK from satellite each 5 min. If available gets RTC
+    - El ID de mensaje es un contador ascendente
+    
+  Arduino compatibility checked: Arduino MEGA
 
-  The circuit:
-  - Nucleo-64 STM32l476 (TX -> D2(PA10), RX -> D8(PA9), GND -> GND, 3V3 -> 3V3)
-  - Arduino MKR1400 (TX -> D13(RX), RX -> D14 (TX), GND -> GND, 3V3 -> VCC)
-  - Arduino UNO (TX -> D2(with level shifter), RX -> D3(with level shifter), GND -> GND, 3V3 -> VCC)
-  - Astronode S devkit (sat or wifi) attached
+  Author: Amelia Sánchez (Hispasat)
+  Date: july 2022
+
 */
 
 #include <astronode.h>
 
-#if defined ARDUINO_NUCLEO_L476RG
-HardwareSerial Serial1(PA10, PA9);
 #define ASTRONODE_SERIAL Serial1
-
-#elif defined(__SAMD21G18A__)
-#define ASTRONODE_SERIAL Serial1
-
-#else
-#include <SoftwareSerial.h>
-SoftwareSerial ASTRONODE_SERIAL(2, 3);  // RX, TX
-#endif
-
 #define ASTRONODE_SERIAL_BAUDRATE 9600
+
+
+// -----------------------------------------------------------------------------------------------
+// Definitions
+// -----------------------------------------------------------------------------------------------
 
 #define ASTRONODE_WLAN_SSID "DIGIFIBRA-AS3x"
 #define ASTRONODE_WLAN_KEY "95uUaTGsDX"
+//#define ASTRONODE_WLAN_SSID "MiFibra-DA72"
+//#define ASTRONODE_WLAN_KEY "a3rSfZJQ"
 #define ASTRONODE_AUTH_TOKEN "zPxrSpbuRY4TpX3ZIVAWdBpKMJRuwicc6Q0cEzaShajiUX3amDD2wrn6AWOiHQ6IV2WH60viVQPcrgYXOQi2NjPOD2KRU0lz"
 
 #define ASTRONODE_GEO_LAT 0.0
@@ -40,13 +39,14 @@ SoftwareSerial ASTRONODE_SERIAL(2, 3);  // RX, TX
 #define ASTRONODE_WITH_MSG_ACK_PIN_EN false
 #define ASTRONODE_WITH_MSG_RESET_PIN_EN false
 
-uint8_t data[17] = {"Hello Astrocast!"};
+int sz = 25;
+uint8_t data2[30] = {"Hello Astrocast from Arduino!"};
+//uint8_t data[25] = {"ARDUINO: Temp[*C] = 25.03"};
 uint16_t counter = 0;
 
 ASTRONODE astronode;
 
-void setup()
-{
+void setup(){
   Serial.begin(9600);
   while (!Serial);
   
@@ -92,22 +92,42 @@ void setup()
 
   //Clear old messages
   astronode.clear_free_payloads();
-  
-  //Try enqueueing a first message in the queue
-  if (astronode.enqueue_payload(data, sizeof(data), counter) == ANS_STATUS_SUCCESS) {
-    counter++;
-  }
+
+  send_pl();
 }
+
+void send_pl(){
+  int an = analogRead(A2);
+  float temp= an*5000/10240;
+  uint8_t data[25] = {"ARDUINO: Temp[*C] = 25.03"};
+
+   if(astronode.enqueue_payload(data, sizeof(data), counter) == ANS_STATUS_SUCCESS) {
+    Serial.println("Message sent");
+    counter++;
+    delay(5000);
+  } else Serial.println("Message sent");
+
+  /*
+  while(astronode.enqueue_payload(data, sizeof(data), counter) != ANS_STATUS_SUCCESS) {
+    Serial.println("Message not sent");
+    delay(5000);
+  }
+  Serial.println("Message sent");
+  counter++;*/
+}
+
 
 void loop()  {
 
   //Querry RTC time
   uint32_t rtc_time;
-  astronode.rtc_read(&rtc_time);
+  ans_status_e result = astronode.rtc_read(&rtc_time);
+  Serial.println(rtc_time);
 
   //Poll for new events
   uint8_t event_type;
   astronode.event_read(&event_type);
+  Serial.println(event_type);
 
   if (event_type == EVENT_MSG_ACK)
   {
@@ -115,15 +135,13 @@ void loop()  {
     if (astronode.read_satellite_ack(&counter_read) == ANS_STATUS_SUCCESS)
     {
       astronode.clear_satellite_ack();
-      astronode.enqueue_payload(data, sizeof(data), counter);
-      counter++;
+      send_pl();
     }
   }
   else if (event_type == EVENT_RESET)
   {
     astronode.clear_reset_event();
-    astronode.enqueue_payload(data, sizeof(data), counter);
-    counter++;
+    send_pl();
   }
 
   delay(10000);

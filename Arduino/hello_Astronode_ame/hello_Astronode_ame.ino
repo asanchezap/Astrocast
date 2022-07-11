@@ -20,7 +20,8 @@ HardwareSerial Serial1(PA10, PA9);
 #define ASTRONODE_SERIAL Serial1
 
 #else
-#include <SoftwareSerial.h>
+#define ASTRONODE_SERIAL Serial1
+//#include <SoftwareSerial.h>
 //SoftwareSerial ASTRONODE_SERIAL(2, 3);  // RX, TX
 #endif
 
@@ -28,6 +29,8 @@ HardwareSerial Serial1(PA10, PA9);
 
 #define ASTRONODE_WLAN_SSID "DIGIFIBRA-AS3x"
 #define ASTRONODE_WLAN_KEY "95uUaTGsDX"
+//#define ASTRONODE_WLAN_SSID "MiFibra-DA72"
+//#define ASTRONODE_WLAN_KEY "a3rSfZJQ"
 #define ASTRONODE_AUTH_TOKEN "zPxrSpbuRY4TpX3ZIVAWdBpKMJRuwicc6Q0cEzaShajiUX3amDD2wrn6AWOiHQ6IV2WH60viVQPcrgYXOQi2NjPOD2KRU0lz"
 
 #define ASTRONODE_GEO_LAT 0.0
@@ -40,7 +43,9 @@ HardwareSerial Serial1(PA10, PA9);
 #define ASTRONODE_WITH_MSG_ACK_PIN_EN false
 #define ASTRONODE_WITH_MSG_RESET_PIN_EN false
 
-uint8_t data[17] = {"Hello Astrocast!"};
+uint8_t data[30
+
+] = {"Hello Astrocast from Arduino!"};
 uint16_t counter = 0;
 
 ASTRONODE astronode;
@@ -53,12 +58,10 @@ void setup()
   //Enable debugging messages on Astronode S library
   astronode.enableDebugging(Serial, false);
 
-  //ASTRONODE_SERIAL.begin(ASTRONODE_SERIAL_BAUDRATE);
-  Serial2.begin(ASTRONODE_SERIAL_BAUDRATE);
+  ASTRONODE_SERIAL.begin(ASTRONODE_SERIAL_BAUDRATE);
 
   //Initialize terminal
-  //astronode.begin(ASTRONODE_SERIAL);
-  astronode.begin(Serial2);
+  astronode.begin(ASTRONODE_SERIAL);
 
   //Write configuration
   astronode.configuration_write(ASTRONODE_WITH_PLD_ACK,
@@ -106,15 +109,18 @@ void setup()
   }
 }
 
+
 void loop()  {
 
   //Querry RTC time
   uint32_t rtc_time;
-  astronode.rtc_read(&rtc_time);
+  ans_status_e result = astronode.rtc_read(&rtc_time);
+  Serial.println(rtc_time);
 
   //Poll for new events
   uint8_t event_type;
   astronode.event_read(&event_type);
+  Serial.println(event_type);
 
   if (event_type == EVENT_MSG_ACK)
   {
