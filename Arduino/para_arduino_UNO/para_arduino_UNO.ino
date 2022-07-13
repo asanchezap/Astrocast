@@ -1,27 +1,20 @@
 /*
-  IOT PROYECT WITH ARDUINO AND ASTROCAST MODULE
-  
-  Description:  
-    - Reads temperature sensor (LM35) and sends the data via the Astrocast module to the satellite each hour
-    - Checks ACK from satellite each 5 min. If available gets RTC
-    - El ID de mensaje es un contador ascendente
-    
-  Arduino compatibility checked: Arduino MEGA
+  This example enqueue a single message in the queue of the Astronode S.
+  It checks periodically if a new event is available.
+  If a "satellite acknowledge" event is receieved, a new message is enqueued in the module.
 
-  Author: Amelia Sánchez - Hispasat
-  Date: july 2022
-
+  The circuit:
+  - Nucleo-64 STM32l476 (TX -> D2(PA10), RX -> D8(PA9), GND -> GND, 3V3 -> 3V3)
+  - Arduino MKR1400 (TX -> D13(RX), RX -> D14 (TX), GND -> GND, 3V3 -> VCC)
+  - Arduino UNO (TX -> D2(with level shifter), RX -> D3(with level shifter), GND -> GND, 3V3 -> VCC)
+  - Astronode S devkit (sat or wifi) attached
 */
 
 #include <astronode.h>
+#define ASTRONODE_SERIAL Serial    // Arduino sin conexion al ordenador
 
-#define ASTRONODE_SERIAL Serial1
+
 #define ASTRONODE_SERIAL_BAUDRATE 9600
-
-
-// -----------------------------------------------------------------------------------------------
-// Definitions
-// -----------------------------------------------------------------------------------------------
 
 #define ASTRONODE_WLAN_SSID "DIGIFIBRA-AS3x"
 #define ASTRONODE_WLAN_KEY "95uUaTGsDX"
@@ -47,11 +40,11 @@ uint16_t counter = 0;
 ASTRONODE astronode;
 
 void setup(){  
-  Serial.begin(9600);
-  while (!Serial);
+  //Serial.begin(9600);
+  //while (!Serial);
   
   //Enable debugging messages on Astronode S library
-  astronode.enableDebugging(Serial, false);
+  //astronode.enableDebugging(Serial, false);
 
   ASTRONODE_SERIAL.begin(ASTRONODE_SERIAL_BAUDRATE);
 
@@ -88,33 +81,28 @@ void setup(){
   //Clear old messages
   astronode.clear_free_payloads();
 
-  send_pl();
+  astronode.enqueue_payload(data, sizeof(data), counter);
+  counter++;
+
   attachInterrupt(digitalPinToInterrupt(2), inter, RISING);
 }
 
-bool event = true;
 
+bool event = true;
 void inter(){
-  Serial.println("heyy");
+  digitalWrite(13, HIGH);
   event = true;
+  delay(100);
+  digitalWrite(14, LOW);
 }
 
 void send_pl(){
-  int an = analogRead(A2);
-  float temp = an;
-  temp = temp*5000/10240;
-  Serial.println(temp);
-  String dataString = "ARDUINO: Temp[*C] = " + String(temp);
-  uint8_t dataArray[dataString.length()];
-  dataString.toCharArray(dataArray, dataString.length());
-  
-  ans_status_e result = astronode.enqueue_payload(dataArray, sizeof(dataArray), counter);
+  ans_status_e result = astronode.enqueue_payload(data, sizeof(data), counter);
   if (result == ANS_STATUS_SUCCESS) {
     counter++;
   } else 
     Serial.println("message NOT sent");
 }
-
 
 void loop()  {
 
