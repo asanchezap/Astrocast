@@ -156,6 +156,27 @@ def text_to_hex(text):
 def generate_message(payload):
     return str(randint(0, 9999)) + text_to_hex(payload)
 
+def check_ACK():
+    msg = EVT_RR
+    crc = generate_crc(msg)
+    msg += crc
+    msg = hexlify(msg.encode())
+    msg = "02" + msg.decode()
+    msg += "03"
+    msg = bytearray.fromhex(msg)
+    ser.write(msg)
+    print("")
+    print("[sent]      -->  " + " ".join(["{:02x}".format(x) for x in msg]))
+
+    output = ser.read(160)
+    print(text_to_hex(output))
+
+    if (text_to_hex(output)[9]=="1"):
+        send(EVT_RR, "")
+        send(RTC_RR, "")
+        send(SAK_RR, "")
+        send(SAK_CR, "")
+
 
 # --------------------------------------------------------------------------------
 # Send and receive on UART
@@ -170,26 +191,25 @@ def generate_message(payload):
 
 
 # If using the Astronode S DevKit Wi-Fi (comment if using Satellite board)
-send(WIF_WR, configuration_wifi)
+# send(WIF_WR, configuration_wifi)
 
 # If you want to specify geolocation (comment if not)
-send(GEO_WR, generate_geolocation(latitude, longitude))
+# send(GEO_WR, generate_geolocation(latitude, longitude))
 
-send(PLD_ER, generate_message(payload))
+# send(PLD_ER, generate_message(payload))
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(3, GPIO.IN)
 
 while True:
-	send(RTC_RR, "")
-	#send(SAK_RR, "")
-	#send(SAK_CR, "")
-
 	if GPIO.input(3):
-		payload = b"Msg auto cada 1h, Raspberry inicia auto, SensorLuz: 1 Noche"
+		payload = b"Msg auto cada 1,5h, Raspberry inicia auto, SensorLuz: 1 Noche"
 	else:
-		payload = b"Msg auto cada 1h, Raspberry inicia auto, SensorLuz: 0 Dia"
+		payload = b"Msg auto cada 1,5h, Raspberry inicia auto, SensorLuz: 0 Dia"
 
 #	send(WIF_WR, configuration_wifi)
 	send(PLD_ER, generate_message(payload))
-	time.sleep(1*60*60)
+
+    for(i in 1:5):
+	   time.sleep(1*1*60)
+       check_ACK();
