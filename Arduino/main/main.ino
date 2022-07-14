@@ -145,7 +145,7 @@ void loop()  {
     event = false;
   }
 
-  // A dormir durante 5 min
+  // A dormir durante 30 min
   for(int i=0; i<=6; i++){ 
     // A dormir durante 5 min
     for(int i=0; i<=38; i++) LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
