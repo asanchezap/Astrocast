@@ -189,7 +189,7 @@ def getInfo(m, op):
         if len(bin)>3 and bin[-4]=='1':      mm += "uplink message is present in the message queue + "
         mm += ")"
     elif op==SAK_RA:
-        mm += "ACK FROM PAYLOAD ID: " + hex_to_decimal(m)
+        mm += "ACK FROM PAYLOAD ID: 0x" + m
     elif op==PLD_ER:
         mm += "ID: 0x" + m[-4] + m[-3] + m[-2] + m[-1]
     elif op==PLD_EA:
@@ -202,7 +202,7 @@ def hasACK(msg):
     msg = linea[9:-16]
     bin = str(dec_to_bin(int(hex_to_decimal(big_endian(decode(msg))))))
 
-    if (op==EVT_RA) and len(bin)>0 and bin[-1]=='1':
+    if (decode(op)==EVT_RA) and bin[-1]=='1':
         return True
 
     return False
@@ -331,9 +331,10 @@ while True:
 	else:
 		payload = b"Msg auto cada 1,5h, Raspberry inicia auto, SensorLuz: 0 Dia"
 
-	send(WIF_WR, configuration_wifi)
+#	send(WIF_WR, configuration_wifi)
 	send(PLD_ER, generate_message(payload))
 
-    for(i in 1:5):
-	   time.sleep(1*1*60)
-       check_ACK();
+	# Enviar PL cada hora y preguntar por ACK cada 5min
+	for i in range(1,12):
+		check_ACK()
+		time.sleep(1*5*60)
