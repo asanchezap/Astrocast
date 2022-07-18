@@ -92,3 +92,322 @@ EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has r
 EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
 EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
 EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+EVT_RR: Read the event register            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+RTC_RR: Real time clock read            
+RTC_RA: Real time clock read [ANSWER]            RTC Time: 2022-07-15 14:31:56
+SAK_RR: Read satellite ACK            
+SAK_RA: Read satellite ACK [ANSWER]            ACK FROM PAYLOAD ID: 0x2436
+SAK_CR: Clear satellite ACK            
+SAK_CA: Clear satellite ACK  [ANSWER]            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+EVT_RR: Read the event register            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+RTC_RR: Real time clock read            
+RTC_RA: Real time clock read [ANSWER]            RTC Time: 2022-07-15 14:32:11
+SAK_RR: Read satellite ACK            
+SAK_RA: Read satellite ACK [ANSWER]            ACK FROM PAYLOAD ID: 0x3574
+SAK_CR: Clear satellite ACK            
+SAK_CA: Clear satellite ACK  [ANSWER]            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+PLD_ER: Enqueue payload            ID: 0x1186
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x1186
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+EVT_RR: Read the event register            
+PLD_ER: Enqueue payload            ID: 0x2451
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x2451
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+EVT_RR: Read the event register            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+RTC_RR: Real time clock read            
+RTC_RA: Real time clock read [ANSWER]            RTC Time: 2022-07-15 20:57:19
+SAK_RR: Read satellite ACK            
+SAK_RA: Read satellite ACK [ANSWER]            ACK FROM PAYLOAD ID: 0x4D66
+SAK_CR: Clear satellite ACK            
+SAK_CA: Clear satellite ACK  [ANSWER]            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+EVT_RR: Read the event register            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+PLD_ER: Enqueue payload            ID: 0x9454
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x9454
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+EVT_RR: Read the event register            
+EVT_RA: Read the event register [ANSWER]            EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+RTC_RR: Real time clock read            
+RTC_RA: Real time clock read [ANSWER]            RTC Time: 2022-07-15 21:39:09
+SAK_RR: Read satellite ACK            
+SAK_RA: Read satellite ACK [ANSWER]            ACK FROM PAYLOAD ID: 0x9454
+SAK_CR: Clear satellite ACK            
+SAK_CA: Clear satellite ACK  [ANSWER]            
+EVT_RA: Read the event register [ANSWER]            EVENT: 10 --> module has reset + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 10 --> module has reset + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 10 --> module has reset + )
+PLD_ER: Enqueue payload            ID: 0x7665
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x7665
+PLD_ER: Enqueue payload            ID: 0x7517
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x7517
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+PLD_ER: Enqueue payload            ID: 0x4171
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x4171
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+PLD_ER: Enqueue payload            ID: 0x4058
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x4058
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+EVT_RR: Read the event register            
+EVT_RA: Read the event register [ANSWER]            EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+RTC_RR: Real time clock read            
+RTC_RA: Real time clock read [ANSWER]            RTC Time: 2022-07-16 14:45:44
+SAK_RR: Read satellite ACK            
+SAK_RA: Read satellite ACK [ANSWER]            ACK FROM PAYLOAD ID: 0x7665
+SAK_CR: Clear satellite ACK            
+SAK_CA: Clear satellite ACK  [ANSWER]            
+EVT_RA: Read the event register [ANSWER]            EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+EVT_RR: Read the event register            
+EVT_RA: Read the event register [ANSWER]            EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+RTC_RR: Real time clock read            
+RTC_RA: Real time clock read [ANSWER]            RTC Time: 2022-07-16 14:45:59
+SAK_RR: Read satellite ACK            
+SAK_RA: Read satellite ACK [ANSWER]            ACK FROM PAYLOAD ID: 0x7517
+SAK_CR: Clear satellite ACK            
+SAK_CA: Clear satellite ACK  [ANSWER]            
+EVT_RA: Read the event register [ANSWER]            EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+EVT_RR: Read the event register            
+EVT_RA: Read the event register [ANSWER]            EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+RTC_RR: Real time clock read            
+RTC_RA: Real time clock read [ANSWER]            RTC Time: 2022-07-16 14:46:14
+SAK_RR: Read satellite ACK            
+SAK_RA: Read satellite ACK [ANSWER]            ACK FROM PAYLOAD ID: 0x4171
+SAK_CR: Clear satellite ACK            
+SAK_CA: Clear satellite ACK  [ANSWER]            
+EVT_RA: Read the event register [ANSWER]            EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+EVT_RR: Read the event register            
+EVT_RA: Read the event register [ANSWER]            EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+RTC_RR: Real time clock read            
+RTC_RA: Real time clock read [ANSWER]            RTC Time: 2022-07-16 14:46:29
+SAK_RR: Read satellite ACK            
+SAK_RA: Read satellite ACK [ANSWER]            ACK FROM PAYLOAD ID: 0x4058
+SAK_CR: Clear satellite ACK            
+SAK_CA: Clear satellite ACK  [ANSWER]            
+EVT_RA: Read the event register [ANSWER]            EVENT: 10 --> module has reset + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 10 --> module has reset + )
+PLD_ER: Enqueue payload            ID: 0x4747
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x4747
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+EVT_RR: Read the event register            
+EVT_RA: Read the event register [ANSWER]            EVENT: 11 --> satellite payload acknowledgement + module has reset + )
+RTC_RR: Real time clock read            
+RTC_RA: Real time clock read [ANSWER]            RTC Time: 2022-07-16 15:17:09
+SAK_RR: Read satellite ACK            
+SAK_RA: Read satellite ACK [ANSWER]            ACK FROM PAYLOAD ID: 0x4747
+SAK_CR: Clear satellite ACK            
+SAK_CA: Clear satellite ACK  [ANSWER]            
+EVT_RA: Read the event register [ANSWER]            EVENT: 10 --> module has reset + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 10 --> module has reset + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 10 --> module has reset + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 10 --> module has reset + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 10 --> module has reset + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 10 --> module has reset + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 10 --> module has reset + )
+PLD_ER: Enqueue payload            ID: 0x6950
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x6950
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+PLD_ER: Enqueue payload            ID: 0x4442
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x4442
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+PLD_ER: Enqueue payload            ID: 0x9241
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x9241
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+PLD_ER: Enqueue payload            ID: 0x5476
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x5476
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+PLD_ER: Enqueue payload            ID: 0x7777
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x7777
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+PLD_ER: Enqueue payload            ID: 0x9579
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x9579
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+PLD_ER: Enqueue payload            ID: 0x9579
+ERROR            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+PLD_ER: Enqueue payload            ID: 0x1480
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x1480
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+PLD_ER: Enqueue payload            ID: 0x7064
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x7064
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+EVT_RR: Read the event register            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+RTC_RR: Real time clock read            
+RTC_RA: Real time clock read [ANSWER]            RTC Time: 2022-07-17 09:51:31
+SAK_RR: Read satellite ACK            
+SAK_RA: Read satellite ACK [ANSWER]            ACK FROM PAYLOAD ID: 0x5476
+SAK_CR: Clear satellite ACK            
+SAK_CA: Clear satellite ACK  [ANSWER]            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+EVT_RR: Read the event register            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+RTC_RR: Real time clock read            
+RTC_RA: Real time clock read [ANSWER]            RTC Time: 2022-07-17 09:51:46
+SAK_RR: Read satellite ACK            
+SAK_RA: Read satellite ACK [ANSWER]            ACK FROM PAYLOAD ID: 0x7777
+SAK_CR: Clear satellite ACK            
+SAK_CA: Clear satellite ACK  [ANSWER]            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+EVT_RR: Read the event register            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+RTC_RR: Real time clock read            
+RTC_RA: Real time clock read [ANSWER]            RTC Time: 2022-07-17 09:52:01
+SAK_RR: Read satellite ACK            
+SAK_RA: Read satellite ACK [ANSWER]            ACK FROM PAYLOAD ID: 0x9579
+SAK_CR: Clear satellite ACK            
+SAK_CA: Clear satellite ACK  [ANSWER]            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+EVT_RR: Read the event register            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1011 --> satellite payload acknowledgement + module has reset + uplink message is present in the message queue + )
+RTC_RR: Real time clock read            
+RTC_RA: Real time clock read [ANSWER]            RTC Time: 2022-07-17 09:52:16
+SAK_RR: Read satellite ACK            
+SAK_RA: Read satellite ACK [ANSWER]            ACK FROM PAYLOAD ID: 0x1480
+SAK_CR: Clear satellite ACK            
+SAK_CA: Clear satellite ACK  [ANSWER]            
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+PLD_ER: Enqueue payload            ID: 0x4786
+PLD_EA: Enqueue payload [ANSWER]            PAYLOAD ID: 0x4786
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
+EVT_RA: Read the event register [ANSWER]            EVENT: 1010 --> module has reset + uplink message is present in the message queue + )
